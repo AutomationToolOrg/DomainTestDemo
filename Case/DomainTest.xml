@@ -1,0 +1,38 @@
+<CaseScript>
+  <Case name="DomainTest">
+    <Open>
+      <url>https://portal.officeppe.com</url>
+    </Open>
+    
+    <Type>
+      <id>cred_userid_inputtext</id>
+      <value>admin@e20150801.ccsctp.net</value>
+    </Type>
+    
+    <Type>
+      <id>cred_password_inputtext</id>
+      <value>Password!</value>
+    </Type>
+    
+    <ClickAndWait>
+      <id>cred_sign_in_button</id>
+    </ClickAndWait>
+
+    <VerifyElementAppear>
+      <css>span.o365cs-nav-brandingText</css>
+    </VerifyElementAppear>
+    
+    <ClickAndWait>
+      <xpath>//a[@id='AdminTile_link']/span</xpath>
+    </ClickAndWait>
+    
+    <VerifyUrl>
+      <url>https://portal.officeppe.com/Admin/Default.aspx#EAdminDefaultPage_AdminHomePageESKU_AdminDashboardPage</url>
+    </VerifyUrl>
+  </Case>
+
+  <Case>
+
+  </Case>
+
+</CaseScript>
