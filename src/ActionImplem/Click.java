@@ -23,8 +23,8 @@ public class Click extends Action {
 	@Override
 	public void Do() {
 		WebDriver driver=ConfigBuilder.Driver;
-		String ideifier=ActionParam.get("identifyby").trim();
-		String value=ActionParam.get("identifyvalue");
+//		String ideifier=ActionParam.get("identifyby").trim();
+//		String value=ActionParam.get("identifyvalue");
 		
 		WebElement element=null;
 		switch(ideifier)

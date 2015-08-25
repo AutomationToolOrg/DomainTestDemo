@@ -19,6 +19,7 @@ public class ActionMapping {
 				for(Map.Entry<String,String> actionItem :action.entrySet()){
 					actionParam.put(actionItem.getKey().trim(), actionItem.getValue().trim());			
 				}		
+				actionParam.put("Case", caseName);
 				ActionInterpreter.InterpreterAction(actionParam);
 			}
 	}

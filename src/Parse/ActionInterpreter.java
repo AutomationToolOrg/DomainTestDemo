@@ -16,8 +16,7 @@ public class ActionInterpreter{
 		String actionName=actionParam.get("Action").trim();	
 		Class actionClass;
 		try {
-			
-		
+				
 			//Create action and execute
 			String actionPackageString="ActionImplem";				
 			actionClass = Class.forName(actionPackageString+"."+actionName);

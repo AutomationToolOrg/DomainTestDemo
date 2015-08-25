@@ -12,7 +12,9 @@ import org.openqa.selenium.remote.ScreenshotException;
 
 
 
+
 import Parse.Action;
+import WebdriverEncapsulation.ConfigBuilder;
 
 public class screenshot extends Action{
 	static int i=0;
@@ -34,8 +36,7 @@ public class screenshot extends Action{
 		} catch (IOException e) {
 			System.out.println("There occurs IOException during making Screenshot");
 			System.out.println("e.printStackTrace()");
-		}
-		
+		}		
 	}
 	
 }
