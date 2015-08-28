@@ -17,10 +17,13 @@ public class ActionMapping {
 			for(int i=0;i<actionList.size();i++){
 				Map<String,String> action=actionList.get(i);
 				for(Map.Entry<String,String> actionItem :action.entrySet()){
-					actionParam.put(actionItem.getKey().trim(), actionItem.getValue().trim());			
+					if(actionItem.getKey()!=null){
+						actionParam.put(actionItem.getKey().trim(), actionItem.getValue().trim());	
+					}
 				}		
 				actionParam.put("Case", caseName);
 				ActionInterpreter.InterpreterAction(actionParam);
+				actionParam.clear();;
 			}
 	}
 }

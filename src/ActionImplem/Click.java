@@ -3,6 +3,7 @@ package ActionImplem;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -23,38 +24,39 @@ public class Click extends Action {
 	@Override
 	public void Do() {
 		WebDriver driver=ConfigBuilder.Driver;
-//		String ideifier=ActionParam.get("identifyby").trim();
-//		String value=ActionParam.get("identifyvalue");
-		
+		String ideifier="";
+		String value="";
 		WebElement element=null;
+		
+		for(Map.Entry<String,String> actionParam :ActionParam.entrySet()){
+			String key=actionParam.getKey();
+			if(key=="id"||key=="css"||key=="xpath"){
+				ideifier=key;
+				break;
+			}			
+		}
+		value=ActionParam.get(ideifier);
+		
 		switch(ideifier)
 		{
 		
 			case "id":
+				
 				element=FindElement.GetElementById(driver, value);
 				//To make element will be clicked get the focus
-				Actions actions=new Actions(driver);
-				
-				Robot robot=null;
-				
+				Actions actions=new Actions(driver);			
+				Robot robot=null;				
 			try {
-				robot = new Robot();
+				robot = new Robot();				
 				actions.contextClick(element).perform();
 				robot.keyPress(KeyEvent.VK_ESCAPE);
 				element.click();	
-				
 				
 			} catch (AWTException e) {
 				
 				e.printStackTrace();
 			}
-			
-			if(ActionParam.get("wait")!=null){
-				String wait=ActionParam.get("wait");
-				WebDriverWait waitTime = new WebDriverWait(driver, 5);
-				element = waitTime.until(ExpectedConditions.elementToBeClickable(By
-						.id(wait)));}
-		
+						
 				break;
 			case "class":
 				element=FindElement.GetElementByClassName(driver, value);
@@ -66,7 +68,8 @@ public class Click extends Action {
 				element.click();
 				break;
 			case "css":
-				
+				element=FindElement.GetElementByCSS(driver,value);
+				element.click();
 				break;
 		}
 		

@@ -1,34 +1,144 @@
-<CaseScript>
+﻿<CaseScript>
   <Case name="DomainTest">
     <Open>
       <url>https://portal.officeppe.com</url>
     </Open>
-    
+
     <Type>
       <id>cred_userid_inputtext</id>
       <value>admin@e20150801.ccsctp.net</value>
     </Type>
-    
+
     <Type>
       <id>cred_password_inputtext</id>
       <value>Password!</value>
     </Type>
-    
-    <ClickAndWait>
-      <id>cred_sign_in_button</id>
-    </ClickAndWait>
 
+    <Click>
+      <id>cred_sign_in_button</id>
+    </Click>
+
+     <VerifyElementAppear>
+      <xpath>//a[@id='AdminTile_link']/span</xpath>
+    </VerifyElementAppear>
+    
+    <Click>
+      <xpath>//a[@id='AdminTile_link']/span</xpath>
+    </Click>
+    
+    <Click>
+      <css>a[name=&quot;DomainManagerPageLayout&quot;] &gt; span.navItemTitle</css>
+    </Click>
+
+    <selectFrame>
+      <name>cf</name>
+    </selectFrame>
+    
+    <Click>
+      <css>#CustomAction_Icon_DomainManagerGrid_AddDomain</css>
+    </Click>
+    
+  	<VerifyElementAppear>
+       <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </VerifyElementAppear>
+    
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </Click>
+
+    <Type>
+      <id>DomainName</id>
+      <value>BOSXLABSAUTO7.COM</value>
+    </Type>
+    
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </Click>
+    
+     <VerifyElementAppear>
+       <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </VerifyElementAppear>
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </Click>
+
+    <selectWindow>
+    
+    </selectWindow>
+   
+    <Type>
+      <id>username</id>
+      <value>Bosxlabs</value>
+    </Type>
+    
+    <Type>
+      <id>password</id>
+      <value>Domains2015</value>
+    </Type>
+
+    <Click>
+      <id>login-submit</id>
+    </Click>
+
+    <Click>
+      <id>permissions-accept</id>
+    </Click>
+    
+   <selectWindow>
+    
+    </selectWindow>
+    
+    <selectFrame>
+      <name>cf</name>
+    </selectFrame>
+
+    <Click>
+      <css>#MultiPageLayout_Next &gt; div</css>
+    </Click>
+    
+    <Click>
+      <id>MultiPageLayout_Additional</id>
+    </Click>
+
+    <Click>
+      <id>MultiPageLayout_Additional</id>
+    </Click>
+    
+    <Click>
+      <css>#MultiPageLayout_Next &gt; div</css>
+    </Click>
+
+    <Click>
+      <id>AllowRedelNoOption</id>
+    </Click>
+    
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span[2]/span</xpath>
+    </Click>
+    
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </Click>
+    
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </Click>
+    
+    <Click>
+      <xpath>(//input[@name='rating'])[2]</xpath>
+    </Click>
+    
+    <Click>
+      <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
+    </Click>
+    
     <VerifyElementAppear>
       <css>span.o365cs-nav-brandingText</css>
     </VerifyElementAppear>
-    
-    <ClickAndWait>
-      <xpath>//a[@id='AdminTile_link']/span</xpath>
-    </ClickAndWait>
-    
-    <VerifyUrl>
-      <url>https://portal.officeppe.com/Admin/Default.aspx#EAdminDefaultPage_AdminHomePageESKU_AdminDashboardPage</url>
-    </VerifyUrl>
+
+   
+    <screenshot>
+    </screenshot>
   </Case>
 
   <Case>

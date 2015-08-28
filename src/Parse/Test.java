@@ -10,7 +10,8 @@ public class Test {
 		
 		Map<String, List<Map<String, String>>>  caseMap=ParseXML.parseXML("Case/DomainTest.xml");
 		ActionMapping.Mapping(caseMap);
-	
+//		Map<String, List<Map<String, String>>>  caseMap=ParseXML.parseXML("Case/WindowTest.xml");
+//		ActionMapping.Mapping(caseMap);
 	}
 
 }

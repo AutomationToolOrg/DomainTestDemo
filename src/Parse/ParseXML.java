@@ -33,12 +33,13 @@ public class ParseXML {
 				 for(Iterator i = _case.elementIterator(); i.hasNext();){			 
 					 Map<String, String> map = new LinkedHashMap<String, String>();
 					 Element element = (Element)i.next();
-					 String actionName = element.getName();					 					
+					 String actionName = element.getName();		
+					 map.put("Action", actionName);
 					 for(Iterator j = element.elementIterator(); j.hasNext(); ){						 						 
 						 Element actionParam = (Element)j.next();
 						 String key = actionParam.getName();						 
 						 String value = actionParam.getTextTrim();
-						 map.put("Action", actionName);
+						 
 						 map.put(key, value);						 						 
 					 }					
 					 //map.clear();

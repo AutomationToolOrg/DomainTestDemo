@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FindElement {
-	public static final long WaitForAppearSeconds = 5;
+	public static final long WaitForAppearSeconds = 100;
 
 	public static WebElement GetElementById(WebDriver Driver, String Id) {
 		WebElement element = null;
@@ -58,6 +58,22 @@ public class FindElement {
 			System.out
 					.println("Element can not be found, Pls check your input Xpath - "
 							+ Xpath);
+			System.out.println(e.getMessage());
+		}
+
+		return element;
+	}
+	public static WebElement GetElementByCSS(WebDriver Driver, String css) {
+		WebElement element = null;
+
+		try {
+			WebDriverWait wait = new WebDriverWait(Driver, WaitForAppearSeconds);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By
+					.cssSelector(css)));
+		} catch (Exception e) {
+			System.out
+					.println("Element can not be found, Pls check your input css selector - "
+							+ css);
 			System.out.println(e.getMessage());
 		}
 
