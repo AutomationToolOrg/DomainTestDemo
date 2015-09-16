@@ -16,6 +16,8 @@ import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
+import log.logger;
+
 public class ParseXML {	
 
       
@@ -33,8 +35,10 @@ public class ParseXML {
 				 for(Iterator i = _case.elementIterator(); i.hasNext();){			 
 					 Map<String, String> map = new LinkedHashMap<String, String>();
 					 Element element = (Element)i.next();
-					 String actionName = element.getName();		
+					 String actionName = element.getName();
+					 String description = element.attributeValue("description");
 					 map.put("Action", actionName);
+					 map.put("Description", description);
 					 for(Iterator j = element.elementIterator(); j.hasNext(); ){						 						 
 						 Element actionParam = (Element)j.next();
 						 String key = actionParam.getName();						 
@@ -50,6 +54,7 @@ public class ParseXML {
 			}
 		} catch (DocumentException e) {
 			// TODO Auto-generated catch block
+			logger.Message("case xml not found in" + path);
 			System.out.println("case xml not found");
 		}	 
      	

@@ -32,7 +32,7 @@ public final class ConfigBuilder {
 //	        profile.setPreference("network.proxy.type", 1);
 //			driver = new FirefoxDriver(profile);
 //			driver.manage().window().maximize();
-			System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
+			//System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
 			driver = new FirefoxDriver();
 			break;
 

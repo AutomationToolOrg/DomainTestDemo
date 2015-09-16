@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import WebdriverEncapsulation.ConfigBuilder;
 import WebdriverEncapsulation.FindElement;
+import log.*;
 
 public class VerifyElementAppear extends Action{
 
@@ -49,11 +50,12 @@ public class VerifyElementAppear extends Action{
 				break;
 		}
 		if (element!=null){
-			
+			logger.Message("Pass");
 			System.out.println("Pass");
 		}else{
 			
-			System.out.println("fail");
+			logger.Message("Fail: element is not be founed on this page, whose ideifier is " + ideifier + "value is " + value);
+			System.out.println("Fail: element is not be founed on this page, whose ideifier is" + ideifier);
 		}
 	}
 	

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import log.logger;
+
 public class FindElement {
 	public static final long WaitForAppearSeconds = 100;
 
@@ -18,6 +20,9 @@ public class FindElement {
 					.id(Id)));
 
 		} catch (Exception e) {
+			logger.Message("Element can not be found, Pls check your input Id - "
+					+ Id);
+			logger.Message(e.getMessage());
 			System.out
 					.println("Element can not be found, Pls check your input Id - "
 							+ Id);
@@ -38,6 +43,10 @@ public class FindElement {
 					.className(ClassName)));
 
 		} catch (Exception e) {
+			
+			logger.Message("Element can not be found, Pls check your input Class Name - "
+					+ ClassName);
+			logger.Message(e.getMessage());
 			System.out
 					.println("Element can not be found, Pls check your input Class Name - "
 							+ ClassName);
@@ -55,6 +64,10 @@ public class FindElement {
 			element = wait.until(ExpectedConditions.elementToBeClickable(By
 					.xpath(Xpath)));
 		} catch (Exception e) {
+			
+			logger.Message("Element can not be found, Pls check your input Xpath - "
+					+ Xpath);
+			logger.Message(e.getMessage());
 			System.out
 					.println("Element can not be found, Pls check your input Xpath - "
 							+ Xpath);
@@ -71,6 +84,10 @@ public class FindElement {
 			element = wait.until(ExpectedConditions.elementToBeClickable(By
 					.cssSelector(css)));
 		} catch (Exception e) {
+			
+			logger.Message("Element can not be found, Pls check your input css selector - "
+					+ css);
+			logger.Message(e.getMessage());
 			System.out
 					.println("Element can not be found, Pls check your input css selector - "
 							+ css);

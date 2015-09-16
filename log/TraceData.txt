@@ -1,0 +1,75 @@
+DomainTestis running
+Openis staring
+DomainTestis running
+Openis staring
+Openis finished
+DomainTestis running
+Typeis staring
+Typeis finished
+DomainTestis running
+Typeis staring
+Typeis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+VerifyElementAppearis staring
+Pass
+VerifyElementAppearis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+selectFrameis staring
+selectFrameis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+VerifyElementAppearis staring
+Pass
+VerifyElementAppearis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+Typeis staring
+Typeis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+VerifyElementAppearis staring
+Fail: element is not be founed on this page, whose ideifier isxpath
+VerifyElementAppearis finished
+DomainTestis running
+Clickis staring
+Clickis finished
+DomainTestis running
+selectWindowis staring
+selectWindowis finished
+DomainTestis running
+Typeis staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished

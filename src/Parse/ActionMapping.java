@@ -6,6 +6,8 @@ import java.util.Map;
 
 import org.dom4j.Element;
 
+import log.logger;
+
 public class ActionMapping {
 
 	
@@ -13,6 +15,8 @@ public class ActionMapping {
 		Map<String,String> actionParam=new LinkedHashMap<String,String>();
 		for(Map.Entry<String, List<Map<String,String>>> caseItem:caseList.entrySet()){
 			String caseName=caseItem.getKey().trim();
+			logger.Message("============================================");
+			logger.Message(caseName+ " is staring to run");
 			List<Map<String,String>> actionList=caseItem.getValue();
 			for(int i=0;i<actionList.size();i++){
 				Map<String,String> action=actionList.get(i);
@@ -21,7 +25,7 @@ public class ActionMapping {
 						actionParam.put(actionItem.getKey().trim(), actionItem.getValue().trim());	
 					}
 				}		
-				actionParam.put("Case", caseName);
+				actionParam.put("Case", caseName);				
 				ActionInterpreter.InterpreterAction(actionParam);
 				actionParam.clear();;
 			}
