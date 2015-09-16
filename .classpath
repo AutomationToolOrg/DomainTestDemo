@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="lib/selenium-java-2.45.0-srcs.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-java-2.45.0.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.45.0.jar"/>
+	<classpathentry kind="lib" path="lib/htmlparser-1.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

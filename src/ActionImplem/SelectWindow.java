@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import WebdriverEncapsulation.ConfigBuilder;
 
-public class selectWindow extends Action {
+public class SelectWindow extends Action {
 		static Set<String> beforeHandles;
 		static int  i=0;
 	 	

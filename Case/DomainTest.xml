@@ -84,13 +84,13 @@
       <id>permissions-accept</id>
     </Click>
     
-   <selectWindow>
+   <SelectWindow>
     
-    </selectWindow>
+    </SelectWindow>
     
-    <selectFrame>
+    <SelectFrame>
       <name>cf</name>
-    </selectFrame>
+    </SelectFrame>
 
     <Click>
       <css>#MultiPageLayout_Next &gt; div</css>

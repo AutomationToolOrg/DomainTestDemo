@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 
 import WebdriverEncapsulation.ConfigBuilder;
 
-public class selectFrame extends Action {	
+public class SelectFrame extends Action {	
 	
 	@Override
 	public void Do() {
