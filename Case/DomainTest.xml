@@ -13,7 +13,9 @@
       <id>cred_password_inputtext</id>
       <value>Password!</value>
     </Type>
-
+ 	<Sleep>
+	
+	</Sleep>
     <Click description="click sign in button">
       <id>cred_sign_in_button</id>
     </Click>
@@ -30,14 +32,16 @@
       <css>a[name=&quot;DomainManagerPageLayout&quot;] &gt; span.navItemTitle</css>
     </Click>
 
-    <selectFrame>
+    <SelectFrame>
       <name>cf</name>
-    </selectFrame>
+    </SelectFrame>
     
     <Click>
       <css>#CustomAction_Icon_DomainManagerGrid_AddDomain</css>
     </Click>
-    
+    <SelectFrame>
+      <name>cf</name>
+    </SelectFrame>
   	<VerifyElementAppear>
        <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
     </VerifyElementAppear>
@@ -48,7 +52,7 @@
 
     <Type>
       <id>DomainName</id>
-      <value>BOSXLABSAUTO7.COM</value>
+      <value>BOSXLABSAUTO8.COM</value>
     </Type>
     
     <Click>
@@ -61,11 +65,15 @@
     <Click>
       <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
     </Click>
-
-    <selectWindow>
+	<Sleep>
+	
+	</Sleep>
+    <SelectWindow>
     
-    </selectWindow>
-   
+    </SelectWindow>
+    <VerifyElementAppear>
+       <id>username</id>
+    </VerifyElementAppear>
     <Type>
       <id>username</id>
       <value>Bosxlabs</value>
@@ -83,7 +91,9 @@
     <Click>
       <id>permissions-accept</id>
     </Click>
-    
+    <Sleep>
+	
+	</Sleep>
    <SelectWindow>
     
     </SelectWindow>

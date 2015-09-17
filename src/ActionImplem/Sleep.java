@@ -1,22 +1,22 @@
 package ActionImplem;
-import java.util.Map;
+
+import java.sql.Driver;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import WebdriverEncapsulation.ConfigBuilder;
 
-
-
-public class Open extends Action{
+public class Sleep extends Action{
 
 	@Override
 	public void Do() {
-		
 		WebDriver driver=ConfigBuilder.Driver;
-		String url=ActionParam.get("url");
-		driver.get(url);
-		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -73,3 +73,922 @@ enter use Password is staring
 enter use Password is finished
 click sign in button is staring
 click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Element can not be found, Pls check your input Xpath - //a[@id='AdminTile_link']/span
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'O365-WANLE-03', ip: '172.23.241.13', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_45'
+Driver info: driver.version: RemoteWebDriver
+Fail: element is not be founed on this page, whose ideifier is xpathvalue is //a[@id='AdminTile_link']/span
+null is finished
+null is staring
+Element can not be found, Pls check your input Xpath - //a[@id='AdminTile_link']/span
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'O365-WANLE-03', ip: '172.23.241.13', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_45'
+Driver info: driver.version: RemoteWebDriver
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Element can not be found, Pls check your input Id - username
+Timed out after 100 seconds waiting for element to be clickable: By.id: username
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'O365-WANLE-03', ip: '172.23.241.13', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 64051cc0-7cfa-4fab-b6dc-f22f73c3ddfd
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Element can not be found, Pls check your input Xpath - //a[@id='AdminTile_link']/span
+Timed out after 100 seconds waiting for element to be clickable: By.xpath: //a[@id='AdminTile_link']/span
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'O365-WANLE-03', ip: '172.23.241.13', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=10, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:22697/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 2d9671c4-6922-45fa-a6ea-d6d353b8ca4a
+Fail: element is not be founed on this page, whose ideifier is xpathvalue is //a[@id='AdminTile_link']/span
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Element can not be found, Pls check your input Xpath - //a[@id='MultiPageLayout_Next']/div/span
+Timed out after 100 seconds waiting for element to be clickable: By.xpath: //a[@id='MultiPageLayout_Next']/div/span
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'O365-WANLE-03', ip: '172.23.241.13', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=10, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:24692/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: f6605972-57d0-4b9b-a4da-6a2496c5f6eb
+Fail: element is not be founed on this page, whose ideifier is xpathvalue is //a[@id='MultiPageLayout_Next']/div/span
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+============================================
+DomainTest is staring to run
+open to login page is staring
+open to login page is finished
+enter use name is staring
+enter use name is finished
+enter use Password is staring
+enter use Password is finished
+null is staring
+null is finished
+click sign in button is staring
+click sign in button is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+null is finished
+null is staring
+Pass
+null is finished
+null is staring
+null is finished
+null is staring
+Element can not be found, Pls check your input Id - DomainName
+Timed out after 100 seconds waiting for element to be clickable: By.id: DomainName
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'O365-WANLE-03', ip: '172.23.241.13', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=10, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:9387/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: d56a64c6-a08d-4602-9f57-12b0bb61d0c9

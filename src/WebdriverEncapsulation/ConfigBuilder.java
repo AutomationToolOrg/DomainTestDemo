@@ -23,17 +23,18 @@ public final class ConfigBuilder {
 		case "IE":
 			System.setProperty("webdriver.ie.driver",
 					"Drivers/IEDriverServer_x64_2.42.0/IEDriverServer.exe");
+		
 			driver = new InternetExplorerDriver();
 			break;
 
 		case "Firefox":
+			System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
+			FirefoxProfile profile = new FirefoxProfile();
+	        profile.setPreference("network.proxy.type", 1);
+			driver = new FirefoxDriver(profile);
+			driver.manage().window().maximize();
 //			System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
-//			FirefoxProfile profile = new FirefoxProfile();
-//	        profile.setPreference("network.proxy.type", 1);
-//			driver = new FirefoxDriver(profile);
-//			driver.manage().window().maximize();
-			//System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
-			driver = new FirefoxDriver();
+//			driver = new FirefoxDriver();
 			break;
 
 		case "Chrome":

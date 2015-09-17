@@ -38,7 +38,9 @@ public class ParseXML {
 					 String actionName = element.getName();
 					 String description = element.attributeValue("description");
 					 map.put("Action", actionName);
-					 map.put("Description", description);
+					 if(description!=null){
+						 map.put("Description", description);
+					 }
 					 for(Iterator j = element.elementIterator(); j.hasNext(); ){						 						 
 						 Element actionParam = (Element)j.next();
 						 String key = actionParam.getName();						 

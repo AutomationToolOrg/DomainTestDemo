@@ -8,49 +8,38 @@ import org.openqa.selenium.WebDriver;
 import WebdriverEncapsulation.ConfigBuilder;
 
 public class SelectWindow extends Action {
-		static Set<String> beforeHandles;
-		static int  i=0;
-	 	
-	  @Override
-      public void Do() {	
-		  i++;
-		 WebDriver driver =ConfigBuilder.Driver;     
-	     Set<String> handles= driver.getWindowHandles();
-	     
-	     String currentWindow;
-	     if(i%2!=0){	    	 
-	    	 beforeHandles=handles;   	    	
-	     }
 
-	     try{
-	    	 Iterator<String> it = handles.iterator();
-	    	 currentWindow=driver.getWindowHandle();
-	    	 while(it.hasNext())
-		     {
-		    	 if (currentWindow != it.next()) {
-		    		 
-		    		 driver.switchTo().window(it.next());	  
-		    	 }    	 	 
-		     }
-	    	 beforeHandles.remove(it.next());
-	     }catch(Exception e){
-	    	
-	    	 Iterator<String> it = beforeHandles.iterator();
-	    	 while(it.hasNext())
-		     {		    		 
-		    		 driver.switchTo().window(it.next());	  
- 	 	 
-		     }
-	    	 
-	     }
-	     }    	 
-	    	
-}          
-	    
-	    
-	    
-	    
+	static int i = 0;
+	static String beforeHandle;
 
-	
+	@Override
+	public void Do() {
+		WebDriver driver = ConfigBuilder.Driver;
+		try {
+			i++;
+			
+			Set<String> handles = driver.getWindowHandles();
+			// String currentWindow=driver.getWindowHandle();;
+			if (i % 2 != 0) {
+				beforeHandle = driver.getWindowHandle();
+			}
 
+			for (String window : handles) {
+				if (i % 2 != 0) {
+					if ((!beforeHandle.equals(window)) && (i % 2 != 0)) {
+						driver.switchTo().window(window);
+					}
+				} else if (i % 2 == 0) {
+					driver.switchTo().window(beforeHandle);
+				}
+			}
 
+		} catch (Exception e) {
+			driver.switchTo().window(beforeHandle);
+			System.out.println(e.getStackTrace());
+
+		}
+
+	}
+
+}
