@@ -1,15 +1,10 @@
 package ActionImplem;
-import java.io.File;
-import java.util.Map;
 
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.Element;
-import org.dom4j.io.SAXReader;
+import java.util.Map;
 
 public abstract class Action {
 	
-	public abstract void Do();
+	public abstract void Do() throws Exception;
 	public Map<String, String> ActionParam;
 	
 }
