@@ -20,9 +20,9 @@
       <id>cred_sign_in_button</id>
     </Click>
 
-     <VerifyElementAppear>
+     <VerifyElementPresent>
       <xpath>//a[@id='AdminTile_link']/span</xpath>
-    </VerifyElementAppear>
+    </VerifyElementPresent>
     
     <Click>
       <xpath>//a[@id='AdminTile_link']/span</xpath>
@@ -59,9 +59,12 @@
       <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
     </Click>
     
-     <VerifyElementAppear>
+     <VerifyElementPresent>
        <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
-    </VerifyElementAppear>
+    </VerifyElementPresent>
+     <SelectFrame>
+      <name>cf</name>
+    </SelectFrame>
     <Click>
       <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
     </Click>
@@ -71,9 +74,9 @@
     <SelectWindow>
     
     </SelectWindow>
-    <VerifyElementAppear>
+    <VerifyElementPresent>
        <id>username</id>
-    </VerifyElementAppear>
+    </VerifyElementPresent>
     <Type>
       <id>username</id>
       <value>Bosxlabs</value>
@@ -142,9 +145,9 @@
       <xpath>//a[@id='MultiPageLayout_Next']/div/span</xpath>
     </Click>
     
-    <VerifyElementAppear>
+    <VerifyElementPresent>
       <css>span.o365cs-nav-brandingText</css>
-    </VerifyElementAppear>
+    </VerifyElementPresent>
 
    
     <screenshot>

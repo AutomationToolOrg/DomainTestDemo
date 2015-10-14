@@ -16,7 +16,9 @@ import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
-import log.logger;
+import log.HtmlLogger;
+import log.Logmessage;
+
 
 public class ParseXML {	
 
@@ -55,9 +57,12 @@ public class ParseXML {
 				//_ActionList.clear();
 			}
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
-			logger.Message("case xml not found in" + path);
-			System.out.println("case xml not found");
+			
+//			HtmlLogger.Message("case xml not found in" + path);
+//			e.printStackTrace();
+//			Logmessage.StackInfo(e);
+//			Logmessage.log();
+			
 		}	 
      	
 		 return _case_Action_Map;

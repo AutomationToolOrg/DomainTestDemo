@@ -36,6 +36,7 @@ public class screenshot extends Action{
 			}			
 			FileUtils.copyFile(srcFile, new File(file+"\\"+imagename+".png"));
 		} catch (IOException e) {
+			
 			System.out.println("There occurs IOException during making Screenshot");
 			System.out.println("e.printStackTrace()");
 		}		

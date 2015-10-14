@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<Driver>IE</Driver>
+	<Drivers>
+		<Driver>Firefox</Driver>
+		<Driver>Chrome</Driver>
+	</Drivers>
+	<DriverPath>
+		<IE>Drivers/IEDriverServer_x64_2.42.0/IEDriverServer.exe</IE>
+		<Firefox>C:/Program Files (x86)/Mozilla Firefox/firefox.exe</Firefox>
+		<Chrome>Drivers/ChromeDriver_Win32/chromedriver.exe</Chrome>
+	</DriverPath>
+	<Case>
+		<CaseName>SignIn.xml</CaseName>
+		<CaseName>NavToAdmin.xml</CaseName>
+	</Case>
+	<output>C:/java work/DomainTestDemo</output>
 </root>

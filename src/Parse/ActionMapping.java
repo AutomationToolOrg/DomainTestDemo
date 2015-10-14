@@ -3,20 +3,26 @@ package Parse;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.dom4j.Element;
+import org.openqa.selenium.Cookie;
 
-import log.logger;
+import WebdriverEncapsulation.ConfigBuilder;
+import log.HtmlLogger;
+
 
 public class ActionMapping {
 
 	
 	public static void  Mapping(Map<String, List<Map<String,String>>> caseList){
 		Map<String,String> actionParam=new LinkedHashMap<String,String>();
+		int caseItemIndex=0;
 		for(Map.Entry<String, List<Map<String,String>>> caseItem:caseList.entrySet()){
+			caseItemIndex++;
 			String caseName=caseItem.getKey().trim();
-			logger.Message("============================================");
-			logger.Message(caseName+ " is staring to run");
+			//HtmlLogger.Message("============================================");
+			//HtmlLogger.Message(caseName+ " is staring to run");
 			List<Map<String,String>> actionList=caseItem.getValue();
 			for(int i=0;i<actionList.size();i++){
 				Map<String,String> action=actionList.get(i);
@@ -29,6 +35,11 @@ public class ActionMapping {
 				ActionInterpreter.InterpreterAction(actionParam);
 				actionParam.clear();;
 			}
+			System.out.println("case "+caseName);	
+			ConfigBuilder.Driver.manage().deleteAllCookies();
+			ConfigBuilder.Driver.quit();
+			ConfigBuilder.Driver=ConfigBuilder.ChooseDriver();
+			
 	}
 }
 }

@@ -1,0 +1,38 @@
+<CaseScript>
+	<Case name="Sign In">
+		<Open>
+			<url>https://portal.officeppe.com</url>
+		</Open>
+
+		<Type>
+			<id>cred_userid_inputtext</id>
+			<value>admin@e20150801.ccsctp.net</value>
+		</Type>
+
+		<Type>
+			<id>cred_password_inputtext</id>
+			<value>Password!</value>
+		</Type>
+
+		<Sleep>
+		</Sleep>
+
+		<Click>
+			<id>cred_sign_in_button</id>
+		</Click>
+
+		<VerifyElementAppear description="admin tile on home page appears-----pass">
+			<xpath>//a[@id='AdminTile_link']/span</xpath>
+		</VerifyElementAppear>
+		
+		<Click>
+			<xpath>//a[@id='AdminTile_link']/span</xpath>
+		</Click>
+		
+		<VerifyElementPresent description="Nav to admin page-----pass">
+			 <css>a[name=&quot;DomainManagerPageLayout&quot;] &gt; span.navItemTitle</css>
+		</VerifyElementPresent>
+		
+	</Case>
+
+</CaseScript>

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import WebdriverEncapsulation.ConfigBuilder;
 import WebdriverEncapsulation.FindElement;
 
-public class VerifyElementAppear extends Action {
+public class VerifyElementPresent extends Action {
 	@Override
 	public void Do() throws Exception {
 		WebDriver driver = ConfigBuilder.Driver;

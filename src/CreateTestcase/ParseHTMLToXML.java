@@ -76,9 +76,10 @@ public class ParseHTMLToXML {
 			} else if(action.equals("SelectFrame")){
 				Element targetNode = actionNode.addElement("name");
 				targetNode.setText(target);				
-			}else if(action.equals("SelectWindow")){
+			}else if(action.equals("SelectWindow")||action.equals("Sleep")){
 								
-			}else {
+			}
+			else {
 				// parse id, xpath,css 
 				String tagName="";
 				if(target.indexOf("id=")==0){

@@ -1,6 +1,7 @@
 package WebdriverEncapsulation;
 
 import java.io.File;
+import java.util.Map;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -11,61 +12,76 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public final class ConfigBuilder {
-	public static String Broswer = GetBrowser();
-	public static WebDriver Driver = ChooseDriver();
-	
-	private static WebDriver ChooseDriver() {
+	public static String Browser = "";
+	public static WebDriver Driver =null;
+	public static Map<String,String> driverPath=null;
+	public static WebDriver ChooseDriver() {
 		WebDriver driver = null;
-
-		switch (Broswer) {
+		switch (Browser) {
 		case "IE":
-			System.setProperty("webdriver.ie.driver",
-					"Drivers/IEDriverServer_x64_2.42.0/IEDriverServer.exe");
-		
-			driver = new InternetExplorerDriver();
+			String IEServer=driverPath.get(Browser);
+			System.setProperty("webdriver.ie.driver", IEServer);
+			// System.setProperty("webdriver.ie.driver",
+		// "Drivers/IEDriverServer_win32_2.42.0/IEDriverServer.exe");
+			DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
+			dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			dc.setCapability("ignoreProtectedModeSettings", true);
+			 driver = new InternetExplorerDriver(dc);
+			
+			//driver = new InternetExplorerDriver();
+			 driver.manage().window().maximize();
 			break;
 
 		case "Firefox":
-			System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
+			// System.setProperty("webdriver.firefox.bin","D:\\my
+			// folder\\ff\\firefox.exe");
+			// FirefoxProfile profile = new FirefoxProfile();
+			// profile.setPreference("network.proxy.type", 1);
+			// driver = new FirefoxDriver(profile);
+			// driver.manage().window().maximize();
+			String FFServer=driverPath.get(Browser);
+			System.setProperty("webdriver.firefox.bin", FFServer);
 			FirefoxProfile profile = new FirefoxProfile();
-	        profile.setPreference("network.proxy.type", 1);
-			driver = new FirefoxDriver(profile);
+			profile.setPreference("network.proxy.type", 1);
+			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-//			System.setProperty("webdriver.firefox.bin","D:\\my folder\\ff\\firefox.exe");    
-//			driver = new FirefoxDriver();
 			break;
 
 		case "Chrome":
-			System.setProperty("webdriver.chrome.driver",
-					"Drivers/ChromeDriver_Win32/chromedriver.exe");
-			
+			String ChromeServer=driverPath.get(Browser);
+			System.setProperty("webdriver.chrome.driver", ChromeServer);
 			driver = new ChromeDriver();
-		
+			driver.manage().window().maximize();
 		default:
 			break;
 		}
 
 		return driver;
 	}
-	private static String GetBrowser(){
-		String  browserType = ""; 		
-		SAXReader saxReader = new SAXReader();	    
+
+	private static String GetBrowser(String path) {
+		String browserType = "";
+		SAXReader saxReader = new SAXReader();
 		Document document;
-		//test code
-		//String file = Path.class.getResource("/Drivers/IEDriverServer_win32_2.42.0/IEDriverServer.exe").getPath();
-		
-		try {			
-			//document = saxReader.read(new File(classLoader.getResource("Config/RunConfig.xml").getFile()));
-			document = saxReader.read(new File("Config/RunConfig.xml"));
+		// test code
+		// String file =
+		// Path.class.getResource("/Drivers/IEDriverServer_win32_2.42.0/IEDriverServer.exe").getPath();
+
+		try {
+			// document = saxReader.read(new
+			// File(classLoader.getResource("Config/RunConfig.xml").getFile()));
+			document = saxReader.read(new File(path+"/RunConfig.xml"));
 			Element root = document.getRootElement();
 			Element driverElement = root.element("Driver");
 			browserType = driverElement.getText();
 		} catch (DocumentException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();	}
-			
+			e.printStackTrace();
+		}
+
 		return browserType;
 	}
 }
