@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -33,7 +34,7 @@ public class ParseHTMLToXML {
 			e.printStackTrace();
 		}
 	
-		Parser parser = Parser.createParser(html, "UNICODE");
+		Parser parser = Parser.createParser(html, "UTF-8");
 		// parse table in html
 		NodeFilter tableFilter = new NodeClassFilter(TableTag.class);
 		TableTag table=null;
@@ -60,26 +61,36 @@ public class ParseHTMLToXML {
 			String action = td[0].getStringText();
 			String target = td[1].getStringText();
 			String value = td[2].getStringText();
-
+			boolean AddSleep=false;
 			// handle action tag
 			action = Character.toUpperCase(action.charAt(0))
 					+ action.substring(1);
 			if (action.toLowerCase().indexOf("wait") != -1) {
+				//ClickAndWait tranfer to Click
 				action = action.substring(0, action.toLowerCase()
 						.indexOf("and"));
+				AddSleep=true;
 			}
-
+			//set the subnode of action node
 			Element actionNode = Case.addElement(action);
 			if (action.equals("Open")) {
+				AddSleep=true;
 				Element targetNode = actionNode.addElement("url");
 				targetNode.setText(target);
 			} else if(action.equals("SelectFrame")){
 				Element targetNode = actionNode.addElement("name");
 				targetNode.setText(target);				
-			}else if(action.equals("SelectWindow")||action.equals("Sleep")){
+			}else if(action.equals("SelectWindow")){
 								
-			}
-			else {
+			}else {
+				if(!value.equals("")&&action.equals("VerifyElementPresent")){			
+					
+					actionNode.addAttribute("description", value);
+				}
+				if(!value.equals("")&&action.equals("Click")){			
+					
+					actionNode.addAttribute("description", value);
+				}
 				// parse id, xpath,css 
 				String tagName="";
 				if(target.indexOf("id=")==0){
@@ -98,26 +109,35 @@ public class ParseHTMLToXML {
 				targetNode.setText(target);
 			}
 
-			if (!value.equals("")) {
+			if (!value.equals("")&&!actionNode.getName().equals("VerifyElementPresent")&&!actionNode.getName().equals("Click")) {
 				Element valueNode = actionNode.addElement("value");
 				valueNode.setText(value);
-			} else {
-
+			} 
+			//set sleep node 
+			if(AddSleep){			
+				Element sleep=Case.addElement("Sleep");
+				sleep.setText("");
 			}
-
 		}
-		XMLWriter writer;
 		try {
-			writer = new XMLWriter(new FileWriter(new File("Case/"+caseName+".xml")));
-			writer.write(document);
-			writer.close();
+			FileWriter writers = new FileWriter(new File("Case/"+caseName+".xml"));
+			String caseFile=document.asXML();
+			//replace all special chars		
+			caseFile=caseFile.replaceAll("&quot;", "\"");
+			caseFile=caseFile.replaceAll("&amp;", "&");
+			caseFile=caseFile.replaceAll("&nbsp;", " ");
+			caseFile=caseFile.replaceAll("&lt;", "<");
+			caseFile=caseFile.replaceAll("&gt;", ">");
+			
+			writers.write(caseFile);
+			writers.close();
 		} catch (Exception e) {
 			System.out.println("Exception occurs on create xml file "+ caseName+".xml");
 			e.printStackTrace();
 		}
 		
+		
 	}
-
 
 
 	public static String ReadHtmlFile(String path) throws Exception {
