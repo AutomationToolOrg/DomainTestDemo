@@ -20,14 +20,14 @@ import WebdriverEncapsulation.ConfigBuilder;
 public class screenshot extends Action{
 	
 	@Override
-	public void Do() {
+	public void Do() throws IOException{
 		
 		String imagename = ActionParam.get("Case") + new Data().toString();
 		WebDriver driver=ConfigBuilder.Driver; 
 		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String outputFolder= "ScreenShot";
 		
-		try {
+//		try {
 			
 			File file=new File(outputFolder);
 			if (!file.exists())
@@ -35,11 +35,11 @@ public class screenshot extends Action{
 				file.mkdir();
 			}			
 			FileUtils.copyFile(srcFile, new File(file+"\\"+imagename+".png"));
-		} catch (IOException e) {
-			
-			System.out.println("There occurs IOException during making Screenshot");
-			System.out.println("e.printStackTrace()");
-		}		
+//		} catch (IOException e) {
+//			
+//			System.out.println("There occurs IOException during making Screenshot");
+//			System.out.println("e.printStackTrace()");
+//		}		
 	}
 	
 }

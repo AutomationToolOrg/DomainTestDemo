@@ -1,22 +1,15 @@
 package ActionImplem;
 
-import java.sql.Driver;
-
-import org.openqa.selenium.WebDriver;
-
-import WebdriverEncapsulation.ConfigBuilder;
-
 public class Sleep extends Action{
 
 	@Override
-	public void Do() {
-		WebDriver driver=ConfigBuilder.Driver;
-		try {
+	public void Do() throws InterruptedException {
+//		try {
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
+//		} catch (InterruptedException e) {
+//			
+//			e.printStackTrace();
+//		}
 	}
 
 }

@@ -23,7 +23,7 @@ public class Select extends Action {
 	org.openqa.selenium.support.ui.Select _selectaction = null;
 
 	@Override
-	public void Do() {
+	public void Do() throws Exception {
 
 		WebDriver driver = ConfigBuilder.Driver;
 		for (Map.Entry<String, String> actionParam : ActionParam.entrySet()) {
@@ -37,7 +37,7 @@ public class Select extends Action {
 		switch (ideifier) {
 		case "id":
 			webelem = FindElement.GetElementById(driver, value);
-			
+
 			break;
 		case "class":
 			webelem = FindElement.GetElementByClassName(driver, value);

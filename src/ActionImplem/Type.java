@@ -16,7 +16,7 @@ import WebdriverEncapsulation.FindElement;
 public class Type extends Action{
 
 	@Override
-	public void Do() {
+	public void Do() throws Exception{
 		WebDriver driver=ConfigBuilder.Driver;
 		String ideifier="";
 		String value="";
