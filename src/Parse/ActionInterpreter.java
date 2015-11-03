@@ -5,7 +5,7 @@ import ActionImplem.Action;
 import log.logger;
 
 public class ActionInterpreter {
-	public static void InterpreterAction(Map<String, String> actionParam) throws Exception {
+	public static void InterpreterAction(Map<String, String> actionParam) {
 
 		String actionName = actionParam.get("Action").trim();
 		//String ActionDescription = actionParam.get("Description");
