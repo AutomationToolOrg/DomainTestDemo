@@ -5,7 +5,7 @@ import WebdriverEncapsulation.ConfigBuilder;
 
 public class Open extends Action {
 	@Override
-	public void Do() throws Exception {
+	public void Do()  {
 		WebDriver driver = ConfigBuilder.Driver;
 		String url = ActionParam.get("url");
 		driver.get(url);

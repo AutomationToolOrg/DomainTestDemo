@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseScript>
+	<Case name="changeThemeOnFlexPane">
+		<Open>
+			<url>https://portal.officeppe.com</url>
+		</Open>
+		
+		<Type>
+			<id>cred_userid_inputtext</id>
+			<value>admin@e20150901.ccsctp.net</value>
+		</Type>
+		
+		<Type>
+			<id>cred_password_inputtext</id>
+			<value>Password!</value>
+		</Type>
+		<Sleep></Sleep>
+		<Click>
+			<id>cred_sign_in_button</id>
+		</Click>
+		
+		
+		<Click>
+			<id>O365_MainLink_Settings</id>
+		</Click>
+		
+		<Click>
+			<xpath>//div[@id='theme_ShellAdmin']/div/div[2]/div[2]/div</xpath>
+		</Click>
+		
+		<Click>
+			<css>#ThemePanel_Pixel > div > img.o365cs-themesPanel-thumbnailDim
+			</css>
+		</Click>
+		<Click>
+			<css>#ThemePanel_Far > div > img.o365cs-themesPanel-thumbnailDim
+			</css>
+		</Click>
+		<Click>
+			<id>_ariaId_39</id>
+		</Click>
+		
+		<VerifyTextPresent>
+			<css>span.o365cs-currentThemeLabel</css>
+			<value>Far,Far Away</value>
+		</VerifyTextPresent>
+	</Case>
+</CaseScript>

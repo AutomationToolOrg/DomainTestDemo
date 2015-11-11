@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseScript>
+	<Case name="MC">
+		<Open>
+			<url>https://portal.officeppe.com</url>
+		</Open>
+		<Slee></Slee>
+		<Type>
+			<id>cred_userid_inputtext</id>
+			<value>admin@e20150901.ccsctp.net</value>
+		</Type>
+		<Type>
+			<id>cred_password_inputtext</id>
+			<value>Password!</value>
+		</Type>
+		<Click>
+			<id>cred_sign_in_button</id>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<id>AdminTile_link</id>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<css>a[name="MessageCenterPage"] > span.navItemTitle</css>
+		</Click>
+		<SelectFrame>
+			<name>cf</name>
+		</SelectFrame>
+		<Click>
+			<id>AnnouncementsRepeater_ctl15_MessageIdHyperLink</id>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<xpath>//a[@id='NavBackLink']/span</xpath>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<xpath>//a[@id='NavBackLink']/span</xpath>
+		</Click>
+		<Sleep></Sleep>
+		<VerifyElementPresent>
+			<id>AnnouncementsRepeater_ctl15_MessageIdHyperLink</id>
+		</VerifyElementPresent>
+	</Case>
+</CaseScript>

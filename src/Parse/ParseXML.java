@@ -28,6 +28,7 @@ public class ParseXML {
 		 SAXReader reader = new SAXReader();
 		 org.dom4j.Document doc;
 		 try {
+			
 			doc = reader.read(new File(path));
 			Element root = doc.getRootElement();				
 			List<Element> caseList = root.elements("Case");			 
@@ -46,23 +47,21 @@ public class ParseXML {
 					 for(Iterator j = element.elementIterator(); j.hasNext(); ){						 						 
 						 Element actionParam = (Element)j.next();
 						 String key = actionParam.getName();						 
-						 String value = actionParam.getTextTrim();
-						 
+						 String value = actionParam.getTextTrim();					 
 						 map.put(key, value);						 						 
 					 }					
-					 //map.clear();
+					
 					 _ActionList.add(map);	 
 				}
 				_case_Action_Map.put(caseName, _ActionList);
-				//_ActionList.clear();
 			}
 		} catch (DocumentException e) {
 			
-//			HtmlLogger.Message("case xml not found in" + path);
-//			e.printStackTrace();
-//			Logmessage.StackInfo(e);
-//			Logmessage.log();
-			
+			HtmlLogger.Message("DocumentException occurs during parse the case xml file " + path,true);
+			Logmessage.StackInfo(e);
+			HtmlLogger.isBreak = true;
+			HtmlLogger.isCaseError = true;
+			Logmessage.log();
 		}	 
      	
 		 return _case_Action_Map;

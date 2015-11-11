@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseScript>
+	<Case name="Theme">
+		<Open>
+			<url>https://portal.officeppe.com/account/#settings</url>
+		</Open>
+		<Sleep>
+			<br>
+		</Sleep>
+		<Type>
+			<id>cred_userid_inputtext</id>
+			<value>admin@e20150901.ccsctp.net</value>
+		</Type>
+		<Type>
+			<id>cred_password_inputtext</id>
+			<value>Password!</value>
+		</Type>
+		<Click>
+			<id>cred_sign_in_button</id>
+		</Click>
+		<Sleep>
+			<br>
+		</Sleep>
+		<VerifyElementPresent description="Setting button on home page appears">
+			<id>O365_MainLink_Settings</id>
+		</VerifyElementPresent>
+		<Open>
+			<url>https://portal.officeppe.com/account/#settings</url>
+		</Open>
+		<Sleep>
+			<br>
+		</Sleep>
+		<Click>
+			<css>div.o365cs-cards-subtitle.ms-fcl-ns > div > span</css>
+		</Click>
+		<Click>
+			<css>#ThemePanel_Beach > div > img.o365cs-themesPanel-thumbnailDim
+			</css>
+		</Click>
+		<Click>
+			<css>#ThemePanel_Cats > div > img.o365cs-themesPanel-thumbnailDim
+			</css>
+		</Click>
+		<Click>
+			<id>_ariaId_7</id>
+		</Click>
+		<VerifyTextPresent>
+			<css>span.o365cs-currentThemeLabel</css>
+			<value>Cats</value>
+		</VerifyTextPresent>
+	</Case>
+</CaseScript>

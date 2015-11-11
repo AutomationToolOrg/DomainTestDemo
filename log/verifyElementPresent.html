@@ -1,0 +1,120 @@
+<html>
+<head>
+<title></title>
+<style type="text/css">
+.datalist {
+	border: 1px solid #429fff;
+	font-family: Arial;
+	border-collapse: collapse;
+}
+
+.datalist th {
+	border: 1px solid #429fff;
+	background-color: #d2e8ff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.datalist td {
+	border: 1px solid #429fff;
+	text-align: left;
+	padding: 1px
+}
+
+.ret_Pass {
+	color: Green
+}
+
+.ret_Fail {
+	color: Red
+}
+
+textarea {
+	-moz-box-shadow: 1px 1px 0 #E7E7E7;
+	-moz-box-sizing: border-box;
+	border-color: #CCCCCC #999999 #999999 #CCCCCC;
+	border-style: solid;
+	border-width: 1px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	height: 160px;
+	margin: 10px auto;
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: medium;
+	padding: 2px;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+	<table cellpadding=1 cellspacing=0 width=100% align=left
+		class="datalist">
+		<thead>
+			<tr>
+				<th width=200>Case name</th>
+				<th width=80>Result</th>
+				<th>Error info</th>
+			</tr>
+		</thead>
+		<tbody>
+			<h2 align="center">Test Suite Report</h2>
+			<tr>
+				<td>MoileShell</td>
+				<td class="ret_Fail">Fail</td>
+				<td>Element can not be found, Pls check your input Id -
+					o365gotoi<br>class org.openqa.selenium.TimeoutException<br>Timed
+					out after 20 seconds waiting for element to be clickable: By.id:
+					o365gotoi Build info: version: '2.45.0', revision: '32a636c', time:
+					'2015-03-05 22:01:35' System info: host: 'O365-WANLE-01', ip:
+					'172.23.240.33', os.name: 'Windows 7', os.arch: 'amd64',
+					os.version: '6.1', java.version: '1.8.0_60' Driver info:
+					org.openqa.selenium.firefox.FirefoxDriver Capabilities
+					[{applicationCacheEnabled=true, rotatable=false,
+					handlesAlerts=true, databaseEnabled=true, version=41.0.2,
+					platform=WINDOWS, nativeEvents=false, acceptSslCerts=true,
+					webStorageEnabled=true, locationContextEnabled=true,
+					browserName=firefox, takesScreenshot=true, javascriptEnabled=true,
+					cssSelectorsEnabled=true}] Session ID:
+					db0077b7-0afb-4e88-a300-8430da0da1ce<br>
+				<blockquote>
+						<br>at
+						org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java
+						: 79)<br>at
+						org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java :
+						228)<br>at
+						WebdriverEncapsulation.FindElement.GetElementById(FindElement.java
+						: 21)<br>at
+						ActionImplem.VerifyElementPresent.Do(VerifyElementPresent.java :
+						30)<br>at
+						Parse.ActionInterpreter.InterpreterAction(ActionInterpreter.java :
+						20)<br>at Parse.ActionMapping.Mapping(ActionMapping.java :
+						38)<br>at Parse.Test.main(Test.java : 57)<br>
+					</blockquote>
+					<br>go to button appears on twide mode----fail<br>
+				</td>
+			</tr>
+			<tr>
+				<td>MC1</td>
+				<td class="ret_Fail">Fail</td>
+				<td>Class Slee can not be found.<br>class
+					java.lang.ClassNotFoundException<br>ActionImplem.Slee<br>
+				<blockquote>
+						<br>at java.net.URLClassLoader.findClass(URLClassLoader.java
+						: 381)<br>at java.lang.ClassLoader.loadClass(ClassLoader.java
+						: 424)<br>at
+						sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java : 331)<br>at
+						java.lang.ClassLoader.loadClass(ClassLoader.java : 357)<br>at
+						java.lang.Class.forName0(Class.java : -2)<br>at
+						java.lang.Class.forName(Class.java : 264)<br>at
+						Parse.ActionInterpreter.InterpreterAction(ActionInterpreter.java :
+						17)<br>at Parse.ActionMapping.Mapping(ActionMapping.java :
+						38)<br>at Parse.Test.main(Test.java : 57)<br>
+					</blockquote>
+					<br></td>
+			</tr>
+		</tbody>
+	</table>
+	<textarea style="display: none"></textarea>
+</body>
+</html>

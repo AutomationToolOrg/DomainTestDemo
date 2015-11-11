@@ -7,11 +7,12 @@ import org.openqa.selenium.WebElement;
 
 import WebdriverEncapsulation.ConfigBuilder;
 import WebdriverEncapsulation.FindElement;
+import log.HtmlLogger;
 
 public class VerifyTextPresent extends Action  {
 
 	@Override
-	public void Do() throws Exception {
+	public void Do() {
 		WebDriver driver = ConfigBuilder.Driver;
 		String ideifier = "";
 		String value = "";
@@ -41,8 +42,10 @@ public class VerifyTextPresent extends Action  {
 			element = FindElement.GetElementByCSS(driver, value);
 			break;
 		}
-		if (element != null&&element.getText().equals(text)) {
-			System.out.println("text" +text +"appears on "+value);
+		if (element != null&&!element.getText().equals(text)) {
+			HtmlLogger.Message("text" +text +"is not appears on "+value,true);		
+			HtmlLogger.isBreak = true;
+			HtmlLogger.isCaseError = true;
 		}
 		
 	}

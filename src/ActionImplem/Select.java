@@ -1,31 +1,26 @@
 package ActionImplem;
 
-import java.util.Set;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.Map.Entry;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.*;
 
-import com.sun.jna.platform.mac.Carbon.EventHotKeyID.ByValue;
-
-import Parse.ActionMapping;
 import WebdriverEncapsulation.ConfigBuilder;
 import WebdriverEncapsulation.FindElement;
+import log.HtmlLogger;
+import log.Logmessage;
 
 public class Select extends Action {
-	String ideifier = "";
-	String value = "";
-	WebElement webelem = null;
-
-	org.openqa.selenium.support.ui.Select _selectaction = null;
 
 	@Override
-	public void Do() throws Exception {
+	public void Do() {
 
 		WebDriver driver = ConfigBuilder.Driver;
+		String ideifier = "";
+		String value = "";
+		WebElement element = null;
+
 		for (Map.Entry<String, String> actionParam : ActionParam.entrySet()) {
 			String key = actionParam.getKey();
 			if (key == "id" || key == "css" || key == "xpath") {
@@ -34,40 +29,31 @@ public class Select extends Action {
 			}
 		}
 		value = ActionParam.get(ideifier);
-		switch (ideifier) {
-		case "id":
-			webelem = FindElement.GetElementById(driver, value);
+		try {
+			switch (ideifier) {
+			case "id":			
+				element = FindElement.GetElementById(driver, value);			
+				break;
+			case "class":
+				element = FindElement.GetElementByClassName(driver, value);			
+				break;
+			case "xpath":
+				element = FindElement.GetElementByXpath(driver, value);			
+				break;
+			case "css":
+				element = FindElement.GetElementByCSS(driver, value);				
+				break;
+			}
+			org.openqa.selenium.support.ui.Select select=new org.openqa.selenium.support.ui.Select(element);
+			select.selectByValue(ActionParam.get("value"));
+			
+		} catch (Exception e) {
+			HtmlLogger.Message("Element " + value + " cannot be selected",true);
+			Logmessage.StackInfo(e);
+			HtmlLogger.isBreak = true;
+			HtmlLogger.isCaseError = true;
 
-			break;
-		case "class":
-			webelem = FindElement.GetElementByClassName(driver, value);
-
-			break;
-		case "xpath":
-			webelem = FindElement.GetElementByXpath(driver, value);
-
-			break;
-		case "css":
-			webelem = FindElement.GetElementByCSS(driver, value);
-
-			break;
 		}
-		_selectaction = new org.openqa.selenium.support.ui.Select(webelem);
-
-		// Map<String, Object> map=new HashMap<String, Object>();
-		// map.put("id", "OrgSize");
-		// map.put("value", "2-4 people");
-		// for(Entry<String, Object> entry:map.entrySet()){
-		// if("value".equals(entry.getKey()))
-		// System.out.println(entry.getValue());
-		// }
-
-		// ActionParam.get("value").startsWith(=)
-		String valString = ActionParam.get("value");
-		valString = valString.substring(valString.indexOf("=") + 1);
-
-		_selectaction.selectByVisibleText(valString);
-
 	}
 
 }

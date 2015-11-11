@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseScript>
+	<Case name="MoileShell">
+		<Open>
+			<url>https://portal.officeppe.com/monitoring/shelltestpage.aspx?mobile=1
+			</url>
+		</Open>
+		<Sleep></Sleep>
+		<Type>
+			<id>cred_userid_inputtext</id>
+			<value>admin@p20151001.ccsctp.net</value>
+		</Type>
+		<Type>
+			<id>cred_password_inputtext</id>
+			<value>Password!</value>
+		</Type>
+		<Click>
+			<id>cred_sign_in_button</id>
+		</Click>
+		<Sleep></Sleep>
+		<Select>
+			<id>LayoutDropDown</id>
+			<value>Twide</value>
+		</Select>
+		<Click>
+			<css>#ChangeButton &amp;gt; span</css>
+		</Click>
+		<Sleep></Sleep>
+		<VerifyElementPresent description="go to button appears on twide mode">
+			<id>o365gotoi</id>
+		</VerifyElementPresent>
+		<Type>
+			<id>runJavascriptTextArea</id>
+			<value> O365Shell.AppBar.AddButton(&amp;quot;Search&amp;quot;
+				,&amp;nbsp; &amp;quot;Left&amp;quot;, function () { alert( '
+				clicked'); },&amp;nbsp; -1, &amp;quot;Search&amp;quot;);&lt;br /&gt;
+			</value>
+		</Type>
+		<Click>
+			<css>#RunJavascriptButton &amp;gt; span</css>
+		</Click>
+		<Click>
+			<xpath>(//button[@type='button'])[28]</xpath>
+		</Click>
+		<VerifyElementPresent>
+			<xpath>(//button[@type='button'])[4]</xpath>
+		</VerifyElementPresent>
+	</Case>
+	<Case name="MC1">
+		<Open>
+			<url>https://portal.officeppe.com</url>
+		</Open>
+		<Slee></Slee>
+		<Type>
+			<id>cred_userid_inputtext</id>
+			<value>admin@e20150901.ccsctp.net</value>
+		</Type>
+		<Type>
+			<id>cred_password_inputtext</id>
+			<value>Password!</value>
+		</Type>
+		<Click>
+			<id>cred_sign_in_button</id>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<id>AdminTile_link</id>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<css>a[name="MessageCenterPage"] > span.navItemTitle</css>
+		</Click>
+		<SelectFrame>
+			<name>cf</name>
+		</SelectFrame>
+		<Click>
+			<id>AnnouncementsRepeater_ctl15_MessageIdHyperLink</id>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<xpath>//a[@id='NavBackLink']/span</xpath>
+		</Click>
+		<Sleep></Sleep>
+		<Click>
+			<xpath>//a[@id='NavBackLink']/span</xpath>
+		</Click>
+		<Sleep></Sleep>
+		<VerifyElementPresent>
+			<id>AnnouncementsRepeater_ctl15_MessageIdHyperLink</id>
+		</VerifyElementPresent>
+	</Case>
+</CaseScript>

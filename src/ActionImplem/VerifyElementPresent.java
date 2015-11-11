@@ -6,10 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import WebdriverEncapsulation.ConfigBuilder;
 import WebdriverEncapsulation.FindElement;
+import log.HtmlLogger;
+import log.Logmessage;
 
 public class VerifyElementPresent extends Action {
 	@Override
-	public void Do() throws Exception {
+	public void Do() {
 		WebDriver driver = ConfigBuilder.Driver;
 		String ideifier = "";
 		String value = "";
@@ -38,9 +40,13 @@ public class VerifyElementPresent extends Action {
 			element = FindElement.GetElementByCSS(driver, value);
 			break;
 		}
-		if (element == null) {
-			throw new Exception();
+		
+		if (element == null) {		
+			HtmlLogger.Message(ActionParam.get("Description")+"----fail",true);				
+			HtmlLogger.isBreak = true;
+			HtmlLogger.isCaseError = true;
 		}
 	}
+	
 
 }
