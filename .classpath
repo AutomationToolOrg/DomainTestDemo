@@ -7,7 +7,8 @@
 	<classpathentry kind="lib" path="lib/selenium-java-2.45.0.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.45.0.jar"/>
 	<classpathentry kind="lib" path="lib/htmlparser-1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/git/DomainTestDemo1/lib/selendroid-client-0.17.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/git/DomainTestDemo1/lib/selendroid-standalone-0.17.0-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="lib/ios-server-standalone-0.6.6-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/selendroid-client-0.17.0.jar"/>
+	<classpathentry kind="lib" path="lib/selendroid-standalone-0.17.0-with-dependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
